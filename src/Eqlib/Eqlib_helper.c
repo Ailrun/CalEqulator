@@ -75,6 +75,7 @@ void cal_braket_matching(Err_t *to_err, Bk_t *to_bk)
 
 	while (to_tok != tok_last)
 	{
+
 #ifdef DEBUG
 		printf("cal_braket_matching[in while]\n");
 #endif

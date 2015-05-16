@@ -6,10 +6,10 @@ void braket_set(Eq_unit_t *eq, Eq_tokened_t *to_tok, int pos, int *len)
 {
 	if (isBraket(eq, 1))
 	{
-		to_tok = tok_add(to_tok, *eq, pos, 1);
+		to_tok = tok_add(to_tok, eq, pos, 1);
 		*len = 1;
 	}
-x}
+}
 
 void braket_check_from_first(Bk_t *to_bk, Bk_t *bk_stack, Eq_tokened_t *to_tok, int *len)
 {
@@ -21,6 +21,13 @@ int isBraket(Eq_unit_t *eq, int len)
 	switch(*eq)
 	{
 		case '(' :
-
+		case ')' :
+		case '{' :
+		case '}' :
+		case '[' :
+		case ']' :
+				 return 1;
+		default :
+				 return 0;
 	}
 }

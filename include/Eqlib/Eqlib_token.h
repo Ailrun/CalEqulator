@@ -14,9 +14,9 @@ typedef struct Eq_tokened_t
 extern Eq_tokened_t *tok_first;
 extern Eq_tokened_t *tok_last;
 
-Eq_tokened_t *tok_add(Eq_tokened_t *old_token, Eq_unit_t *token, int start, int length);
+Eq_tokened_t *tok_add(Eq_tokened_t *old_token, Eq_unit_t *value, int start, int length);
 Eq_tokened_t *tok_delete(Eq_tokened_t *token);
-Eq_tokened_t *tok_delete_all(void);
+void tok_delete_all(void);
 Eq_tokened_t *tok_search_by_eq_unit(Eq_unit_t *search, int length);
 Eq_tokened_t *tok_search_by_condition(int (*condition)(Eq_unit_t *, int), int length);
 
