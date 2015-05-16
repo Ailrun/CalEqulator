@@ -23,4 +23,5 @@ void cal_with_brakets(Num_t *to_result, Err_t *to_error, Bk_t *to_braket, Eq_tok
 
 //eq_print helper
 
+
 #endif //#ifndef EQLIB_HELPER_H_ end
