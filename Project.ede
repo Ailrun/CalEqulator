@@ -1,0 +1,6 @@
+;; Object CalEqulator
+;; EDE Project Files are auto generated: Do Not Edit
+(ede-proj-project "CalEqulator"
+  :file "Makefile"
+  :name "CalEqulator"
+  :targets "debug")

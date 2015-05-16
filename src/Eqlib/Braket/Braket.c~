@@ -1,0 +1,60 @@
+#include "Braket.h"
+#include <stdlib.h>
+
+void braket_set(Eq_unit_t *eq, Eq_tokened_t *to_tok, int pos, int *len)
+{
+	Eq_tokened_t *new_tok;
+	switch (*eq)
+	{
+		case '(' :
+				 to_tok->token = (Eq_unit_t *)malloc(sizeof(Eq_unit_t));
+				 *(to_tok->token) = '(';
+				 to_tok->start = pos;
+				 to_tok->length = 1;
+				 *len = 1;
+				 new_tok = (Eq_tokened_t *)malloc(sizeof(Eq_tokened_t));
+				 to_tok->next = new_tok;
+				 new_tok->back = to_tok;
+
+				 break;
+		case ')' :
+				 to_tok->token = (Eq_unit_t *)malloc(sizeof(Eq_unit_t));
+				 *(to_tok->token) = ')';
+				 to_tok->start = pos;
+				 to_tok->length = 1;
+				 *len = 1;
+				 break;
+		case '[' :
+				 to_tok->token = (Eq_unit_t *)malloc(sizeof(Eq_unit_t));
+				 *(to_tok->token) = '[';
+				 to_tok->start = pos;
+				 to_tok->length = 1;
+				 *len = 1;
+				 break;
+		case ']' :
+				 to_tok->token = (Eq_unit_t *)malloc(sizeof(Eq_unit_t));
+				 *(to_tok->token) = ']';
+				 to_tok->start = pos;
+				 to_tok->length = 1;
+				 *len = 1;
+				 break;
+		case '{' :
+				 to_tok->token = (Eq_unit_t *)malloc(sizeof(Eq_unit_t));
+				 *(to_tok->token) = '{';
+				 to_tok->start = pos;
+				 to_tok->length = 1;
+				 *len = 1;
+				 break;
+		case '}' :
+				 to_tok->token = (Eq_unit_t *)malloc(sizeof(Eq_unit_t));
+				 *(to_tok->token) = '}';
+				 to_tok->start = pos;
+				 to_tok->length = 1;
+				 *len = 1;
+				 break;
+	}
+}
+
+void braket_check_from_first(Bk_t *to_bk, Bk_t *bk_stack, Eq_tokened_t *to_tok, int *len)
+{
+}

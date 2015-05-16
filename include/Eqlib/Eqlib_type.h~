@@ -1,0 +1,17 @@
+#ifndef EQLIB_TYPE_H_ //#ifndef EQLIB_TYPE_H_ start
+#define EQLIB_TYPE_H_ //define EQLIB_TYPE_H_
+
+typedef struct Eq_tokened_t
+{
+	struct Eq_tokened_t *back;
+	struct Eq_tokened_t *next;
+
+	Eq_unit_t *token;
+	int start;
+	int length;
+} Eq_tokened_t;
+
+Eq_tokened_t *tok_first;
+Eq_tokened_t *tok_last;
+
+#endif //#ifndef EQLIB_TYPE_H_ end
